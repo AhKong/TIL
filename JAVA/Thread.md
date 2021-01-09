@@ -48,5 +48,39 @@ class MakeThreadDemo {
 ```
 
 
+#### thread 생성하는 법 - 2 
+
+>  Thread를 상속하는 클래스의 정의와 인스턴스 생성 -> start() 메서드 호출 
+
+- Thread를 상속받는 메서드는 반드시 __public void run() 메서드를 오버라이딩 해야함__ 
+- 그래야 start 메서드를 호출을 통해 쓰레드가 생성 되었을때 이 쓰레드는 오버라이딩 된 run 메서드를 실행 시킴! 
+
+``` java
+
+class Task extend Thread{
+    @overriding
+    public void run(){ 
+        int n1 = 10;
+        int n2 = 20; 
+        String name = Thread.currentThread().getName();
+        System.out.println(name +" : " + (n1+n2));
+    }
+}
+
+class MakeThreadDemo {
+     public static void main(Stirng[] args){
+        Task t1 = new Task();
+        Task t2 = new Task();
+
+        t1.start(); 
+        t2.start(); 
+        System.out.println("END" + Thread.currentTread().getName());
+        
+    }
+}
+
+```
+
+참고로 thread를 생성하는 방법은 1번째 방법을 주로 사용한다고 함 ~! 
 
 
