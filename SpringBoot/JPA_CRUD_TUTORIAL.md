@@ -251,48 +251,58 @@ logging.level.org.hibernate.type.descriptor.sql=trace
 
 ###  회원 입력 
 
-- request body에 json 타입으로 등록할 회원의 아이디와 이름 입력하여 api 호출 
+ request body에 json 타입으로 등록할 회원의 아이디와 이름 입력하여 api 호출 
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMjQw/MDAxNjExNTU4NzM4NjYw.nQWczK9Vsw8_z0hgN93sPbbbpAqjLQhhMNtOXUGDeCUg.XXngwbBPUlh4N8IIRoqHyCqS_In-Z1sbsmGO_API-mog.PNG.ahreum0412/image.png?type=w966)
-
-- 콘솔창에 찍히는 쿼리 
+<Br>
+콘솔창에 찍히는 쿼리 
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMzAg/MDAxNjExNTU4OTk5MTEz.pxA69PeYJfWQfOiHw07XN_hXMfp6KDtK1ffw3e5h4UEg.J7c56wh0H-3_N-RgDpXXRyxI02inkyt0vYgi9ASHHGMg.PNG.ahreum0412/image.png?type=w966)
 
 ### 전체 회원 조회
 
 - api 호출
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMjQ2/MDAxNjExNTU5MDU4NzM5.3oowEL8C4uDIxoROG7mPrbVMPN4_C0vy8uHUhAGzy6og.4cM72GZQWErkl0sOT05NhyMJ0bFn8PRuBG6UzIFIDCgg.PNG.ahreum0412/image.png?type=w966)
 
-- 콘솔창에 찍히는 쿼리 
-![](https://postfiles.pstatic.net/MjAyMTAxMjVfMTY3/MDAxNjExNTU5MDc0MjUx.YXbAfMIt5LMeTZR1OL4Wx6-pAr4tJ0En5zAlfWmastsg.vs0AM1pQLKgvI-f-l4AecX0xMKz2_KxAvzjst46Su88g.PNG.ahreum0412/image.png?type=w966)
+- 콘솔창에 찍히는 쿼리
+
+ ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMTY3/MDAxNjExNTU5MDc0MjUx.YXbAfMIt5LMeTZR1OL4Wx6-pAr4tJ0En5zAlfWmastsg.vs0AM1pQLKgvI-f-l4AecX0xMKz2_KxAvzjst46Su88g.PNG.ahreum0412/image.png?type=w966)
 
 
 ### 1명의 회원 조회 (mbrNo가 1인 회원 조회 결과)
 - 조회할 회원의 mbrNo를 추가하여 api 호출
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfODcg/MDAxNjExNTU5MTYwOTIx.EiRpCUQgcZsxidB8hgyBLkvxD46udLcjsmwFSVDP1bwg.lZTr1ENaermPq5E9YO0htuqn7qbYO4mWg2q-emq4SrEg.PNG.ahreum0412/image.png?type=w966)
 
 - 콘솔창에 찍히는 쿼리
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMTkg/MDAxNjExNTU5MTk2MTEz.rgYnVRGtG2Uh0aQHMqkq0eQVfCL2IuoOeDGwoyzo3oIg.h1xVa7J3k7b5_TvIL_q0g9GgiGYVM2s-Z-JdVpu0MAwg.PNG.ahreum0412/image.png?type=w966)
 
 ### 회원 정보 수정 
 
 - 수정할 회원의 정보 request body에 담아 api 호출
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMTY2/MDAxNjExNTU5MzIzNTM2.lNi7SuLrE0rqpfXiwtndmK7VBc0KbDsAs5o-GrZo7usg.218n-lcxdtfGdzCor7avRCfMB5jrmZmo9xnV71XENcgg.PNG.ahreum0412/image.png?type=w966)
 
 - 콘솔창에 찍히는 쿼리
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMTIx/MDAxNjExNTU5MzYzNDk4.fa7ZLATGKlM2MuJpGbC3G6FzLzB1_lkc23TUe_6E9LYg.znWx6ajKHNJ_mrLAevjGmQrXPEQb-Nhcm-NioilQM4og.PNG.ahreum0412/image.png?type=w966)
 
 - db 데이터 확인 
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMjIw/MDAxNjExNTU5MzQ4MDYw.bZJxKwir3lpl_7Hsk5pBJyYY12m5f7y5_ZDkILURgoIg.hn2T2WWF1jhPg03_7Nwi7iF1EzNxNvWRMBh6pE28XI0g.PNG.ahreum0412/image.png?type=w966)
 
 ### 회원 정보 삭제
 
 - 삭제할 회원 mbrNo 추가하여 api 호출 
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfODUg/MDAxNjExNTU5NDEwNDQz.ThPaNMVA7wbe4zg29j30hAGx0zLa1_8fBwnThhGM0GMg.OEQqd4yPlxrC4_dHLJFgnhmGOsbEBzw1k9yY-SYalYwg.PNG.ahreum0412/image.png?type=w966)
 
 - 콘솔창에 찍히는 쿼리
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfODQg/MDAxNjExNTU5NDI2NTM2.6uuLO_mmRM2WCNGMMiXRGBuPDkhTrJmbsze1QP-n58cg.6MO6cNV-s7RCXTfBOm1Sn5F_-zbZQbdYUiFRDWo0_wsg.PNG.ahreum0412/image.png?type=w966)
 
 - db 데이터 확인
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfNTYg/MDAxNjExNTU5NDUxNzg5.LR81l_WZY1W_ATC52CCO4kkrBP4-ezzgPdGrNSEWndAg.IpTGfzaSbtmQbEVu-W-4880XAjVwzepyTG4LWAF3etcg.PNG.ahreum0412/image.png?type=w966)
 
 
