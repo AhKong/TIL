@@ -253,8 +253,9 @@ logging.level.org.hibernate.type.descriptor.sql=trace
 
  request body에 json 타입으로 등록할 회원의 아이디와 이름 입력하여 api 호출 
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMjQw/MDAxNjExNTU4NzM4NjYw.nQWczK9Vsw8_z0hgN93sPbbbpAqjLQhhMNtOXUGDeCUg.XXngwbBPUlh4N8IIRoqHyCqS_In-Z1sbsmGO_API-mog.PNG.ahreum0412/image.png?type=w966)
-<Br>
+
 콘솔창에 찍히는 쿼리 
+
 ![](https://postfiles.pstatic.net/MjAyMTAxMjVfMzAg/MDAxNjExNTU4OTk5MTEz.pxA69PeYJfWQfOiHw07XN_hXMfp6KDtK1ffw3e5h4UEg.J7c56wh0H-3_N-RgDpXXRyxI02inkyt0vYgi9ASHHGMg.PNG.ahreum0412/image.png?type=w966)
 
 ### 전체 회원 조회
