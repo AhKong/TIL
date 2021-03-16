@@ -69,3 +69,4 @@ public ResponseEntity<?> readCookie(HttpServletRequest request) {
 
 - 회사 데모 페이지를 구현하면서 세션대신 jwt 토큰을 사용하였다. 근데 나는 jwt 토큰을 header와 localStorage에 저장 후 서버에게 요청을 보낼때 마다 localStorage에서 jwt 토큰 값을 가져와 header에 담는 과정을 반복하였다.
 이렇게 되면 보안상의 이유로 좋지 않다는 사수의 조언을 들어 수정하게 되었다. 그리고 정리하면서 느낀점은 나는 현재 jwt 토큰을 제대로 사용하지 못하고 있음을 인지하였고 jwt 구현법을 좀 더 고민 후 til에 업로드 및 프로젝트에 적용해야겠다 흑흑구ㅜㅜㅜㅜㅜ
+
