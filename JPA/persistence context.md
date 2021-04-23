@@ -108,7 +108,7 @@ Systen.out.println(a == b); // 동일성 비교 true
 
 ### 3. 트랜잭션을 지원하는 쓰기 지연(transactional wirte-behind) - 엔티티 등록
 ![](https://github.com/namjunemy/TIL/blob/master/Jpa/inflearn/img/04_transactional_write_behind.PNG?raw=true)
-- 위에서도 언급 하였지만, em.()메서드를 사용하여 엔티티를 저장하여도 db에 insert 쿼리문을 날리지 않음
+- 위에서도 언급 하였지만, em.persist()메서드를 사용하여 엔티티를 저장하여도 db에 insert 쿼리문을 날리지 않음
 - 엔티티 매니저는 트랜잭션을 커밋하기 직전까지 내부 쿼리 저장소에 insert sql문을 모아둠
 - 그리고 트랜잭션이 커밋 할 때 모다운 쿼리를 db에 보냄
 - 이러한 과정을 `트랜잭션을 지원하는 쓰기 지연`이라고 함.
