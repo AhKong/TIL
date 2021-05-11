@@ -152,9 +152,63 @@
     ```
 
 ### 기본키 직접 할당 전략 
-- 
-```java 
-@Id
-@Column(name="id")
-private String id
-```    
+
+- 기본 키를 직접 할당하려면 @Id 어노테이션을 사용해서 매핑 하면 됨
+- em.persist()로 엔티티를 저장하기 전에 애플리케이션에서 기본키를 직접 할당하는 방법 
+- @Id 적용 가능한 자바 타입
+    - 자바 기본형 
+    - 자바 래퍼(Wrapper)형 
+
+
+### IDENTITY 전략
+- 기본 키 생성을 데이터베이스에 위임 하는 전략 
+- `@GeneratedValues` 어노테이션을 사용하여  IDENTITY 전략 적용 
+- 데이터베이스에 값을 저장하고 나서야 기본 키 값을 구할 수 있을 때 사용 
+
+```java
+@Entity 
+public class Board{
+    @Id
+    @GeneratedValues(strategy = GenerationType.IDENTITY)
+    private Long id;
+    ...
+}
+
+Board board = new Board();
+em.persist(board);
+
+Long addId = board.getId(); // 1 
+    
+```
+
+
+### SEQUENCE 전략
+- 데이터베이스 시퀀스는 유일한 값을 순서대로 생성하는 특별한 데이터베이스 오브젝트 
+- SEQUENCE 전략은 이런 시퀀스 기능을 사용해서 기본키를 생성 
+- 시퀀스를 지원하는 데이터베이스에서만 사용 할 수 있음
+
+
+### TABLE 전략
+- 키 생성 전용 테이블을 하나 만들고 여기에 이름과 값으로 사용할 컬럼을 만들어 데이터베이스의 시퀀스를 흉내내는 전략
+- 해당 전략은 테이블을 사용하기 때문에 모든 데이터베이스에 적용 할 수 있음   
+
+### AUTO 전략
+- 선택한 데이터베이스 방언에 따라 IDENTITY,SEQUENCE,TABLE 전략 중 하나를 자동으로 선택 
+- 오라클을 선택하면 SEQUENCE , MySQL을 선택하면 IDENTITY를 사용함 
+- 그렇기 때문에 데이터베이스를 변경해도 코드를 수정 할 필요가 없음 
+- 키 생성 전략이 아직 확정되지 않은 개발 초기 단계나 프로토타입 개발 시 편리하게 사용 가능 
+- 단,SEQUENCE나 TABLE 전략이 선택 되면 시퀀스나 키 생성용 테이블을 미리 만들어 두어야 함 
+- 만약 스키마 자동 생성 기능을 사용한다면 하이버네이트가 기본 값을 사용하여 적절한 시퀀스나 키 생성용 테이블을 만들어 줌
+
+
+## 필드와 컬럼 매핑 : 레퍼런스 
+
+
+매핑 어노테이션|설명|
+|-----------------|---|
+|@Column| 컬럼을 매핑함|
+|@Enumerated| 자바의 enum 타입을 매핑|
+|@Temporal|날짜 타입을 매핑|
+|@Lob|BLOB,CLOB 타입을 매핑|
+|@Transient|특정 필드를 데이터베이스에 매핑하지 않음|
+|@Access|JPA가 엔티티에 접근하는 방식을 지정|
