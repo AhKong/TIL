@@ -166,6 +166,8 @@ public void test(String myString){
 - notify() 를 호출하는 경우에는 어떤 객체가 깨어날 지 모르기 때문에 notifyAll()로 모든 객체를 깨운뒤에  JVM의 스레드 스케줄링에 의해 처리되는것이 안전함 
 - `동기화 블럭 내에서만 사용가능` 
 
+
+
 ```java
 class Account{
     int balance = 1000;
