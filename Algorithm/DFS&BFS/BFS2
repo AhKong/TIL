@@ -1,0 +1,50 @@
+package DFS;
+
+import java.io.*;
+import java.util.*;
+
+public class BFS2 {
+
+    static int[][] graph;
+    static boolean[] visited;
+    static int count = 0;
+
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        int pcNum = sc.nextInt();
+        int edgeNum = sc.nextInt();
+
+        graph = new int[pcNum+1][pcNum+1];
+        visited = new boolean[pcNum+1];
+
+
+        for(int i = 1 ; i<=edgeNum ; i++){
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+
+            graph[x][y] = y;
+            graph[y][x] = x;
+        }
+
+        bfs(1);
+        System.out.println(count);
+    }
+
+    public static  void bfs(int start){
+        Queue<Integer> q = new LinkedList<>();
+        q.add(start);
+        visited[start] = true;
+
+        while(!q.isEmpty()){
+
+            int now = q.poll();
+            for (int i : graph[now]){
+                if (visited[i] == false && i !=0){
+                    q.add(i);
+                    count++;
+                    visited[i] = true;
+                }
+            }
+        }
+    }
+}
