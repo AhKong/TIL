@@ -1,2 +1,4 @@
-# TIL
-Today I Learned
+# TIL :: Today I Learn
+
+
+- 공부한 내용을 먼저 정리하는 용으로 사용 완성된 글은 개발 블로그 업로드가 최종 목표
